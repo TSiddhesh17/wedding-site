@@ -20,53 +20,48 @@ h1, h2 {
 
 /* HERO */
 .hero {
-    height: 100vh;
-    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
-                url('hero.jpg') no-repeat center center;
-    background-size: cover;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
-    padding-top: 200px; /* adjust vertical text */
-    color: #f5e6c8;
+    align-items: center;
     text-align: center;
-    overflow: hidden;
-    animation: zoomBackground 20s ease-in-out infinite alternate;
 }
 
-.hero div {
+.hero img {
     width: 100%;
-    max-width: 800px;
+    height: auto; /* keeps aspect ratio */
+    display: block;
 }
 
-.hero p, .hero h1 {
-    opacity: 0;
-    transform: translateY(20px);
+.hero .hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #f5e6c8;
+    max-width: 90%;
     animation: fadeSlideIn 2s ease forwards;
 }
 
-.hero p {
-    font-size: 24px; /* reduced 2x */
+.hero .hero-text p {
+    font-size: 24px;
     font-style: italic;
     margin-bottom: 15px;
     animation-delay: 0s;
 }
 
-.hero h1 {
-    font-size: 60px; /* reduced 2x */
-    margin: 10px 0;
+.hero .hero-text h1 {
+    font-size: 60px;
+    margin: 0;
     animation-delay: 0.7s;
 }
 
-/* Animations */
+/* Animation */
 @keyframes fadeSlideIn {
     0% { opacity: 0; transform: translateY(20px); }
     100% { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes zoomBackground {
-    0% { transform: scale(1); }
-    100% { transform: scale(1.1); }
 }
 
 /* SECTION */
@@ -134,19 +129,12 @@ h1, h2 {
 
 /* RESPONSIVE */
 @media(max-width: 768px) {
-    .hero {
-        padding-top: 120px;
-        background-position: center 50%;
-        background-size: cover;
-        min-height: 60vh;
+    .hero .hero-text p {
+        font-size: 18px;
     }
 
-    .hero h1 {
-        font-size: 40px; /* mobile-friendly */
-    }
-
-    .hero p {
-        font-size: 18px; /* mobile-friendly */
+    .hero .hero-text h1 {
+        font-size: 40px;
     }
 
     .celebrate, .details {
@@ -161,7 +149,8 @@ h1, h2 {
 
 <!-- HERO -->
 <section class="hero">
-    <div>
+    <img src="hero.jpg" alt="Hero Image">
+    <div class="hero-text">
         <p>Road to Forever with</p>
         <h1>Siddhesh & Upasana</h1>
     </div>

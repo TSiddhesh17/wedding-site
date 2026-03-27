@@ -24,10 +24,15 @@ h1, h2 {
     background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
                 url('hero.jpg') center/cover no-repeat;
     display: flex;
-    align-items: center;
+    align-items: flex-end;      /* Push content toward bottom */
     justify-content: center;
+    padding-bottom: 100px;      /* Space from bottom */
     color: #f5e6c8;
     text-align: center;
+}
+
+.hero div {
+    width: 100%;
 }
 
 .hero h1 {

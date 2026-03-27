@@ -25,22 +25,22 @@ h1, h2 {
     overflow: hidden;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end; /* text at bottom */
     text-align: center;
 }
 
 .hero img {
     width: 100%;
-    height: auto; /* keeps aspect ratio */
+    height: auto; /* maintain aspect ratio */
     display: block;
 }
 
 .hero .hero-text {
     position: absolute;
-    top: 50%;
+    bottom: 30px; /* distance from bottom */
     left: 50%;
-    transform: translate(-50%, -50%);
-    color: #f5e6c8;
+    transform: translateX(-50%);
+    color: #7b2e2e; /* brown text */
     max-width: 90%;
     animation: fadeSlideIn 2s ease forwards;
 }
@@ -48,7 +48,7 @@ h1, h2 {
 .hero .hero-text p {
     font-size: 24px;
     font-style: italic;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     animation-delay: 0s;
 }
 

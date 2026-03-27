@@ -24,11 +24,11 @@ h1, h2 {
     background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
                 url('hero.jpg') no-repeat;
     background-size: cover;
-    background-position: center 30%;
+    background-position: center 30%; /* desktop */
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    padding-top: 350px;
+    padding-top: 350px; /* move text down */
     color: #f5e6c8;
     text-align: center;
 }
@@ -135,8 +135,11 @@ h1, h2 {
 /* RESPONSIVE */
 @media(max-width: 768px) {
     .hero {
-        padding-top: 200px;
-        background-position: center 40%;
+        padding-top: 150px; /* reduce text padding */
+        background-position: center 50%; /* center image for mobile */
+        background-size: contain; /* show full image */
+        height: auto; /* let hero adjust height */
+        min-height: 70vh; /* keep decent height */
     }
 
     .hero h1 {

@@ -24,10 +24,9 @@ h1, h2 {
     width: 100%;
     overflow: hidden;
     display: flex;
-    justify-content: flex-start; /* desktop: left-aligned */
+    justify-content: center; /* center horizontally */
     align-items: flex-end; /* bottom alignment */
-    text-align: left;
-    padding-left: 5%; /* desktop left margin */
+    text-align: center; 
 }
 
 .hero img {
@@ -39,8 +38,9 @@ h1, h2 {
 .hero .hero-text {
     position: absolute;
     bottom: 30px;
-    left: 5%; /* desktop left */
-    color: #c38f5f; /* light brown on desktop */
+    left: 50%;
+    transform: translateX(-50%);
+    color: #FFD700; /* gold text for all views */
     max-width: 90%;
     animation: fadeSlideIn 2s ease forwards;
 }
@@ -129,19 +129,6 @@ h1, h2 {
 
 /* RESPONSIVE */
 @media(max-width: 768px) {
-    .hero {
-        justify-content: center; /* center text on mobile */
-        padding-left: 0;
-    }
-
-    .hero .hero-text {
-        left: 50%;
-        transform: translateX(-50%);
-        bottom: 20px;
-        color: #FFD700; /* gold on mobile */
-        text-align: center;
-    }
-
     .hero .hero-text p {
         font-size: 18px;
     }

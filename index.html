@@ -24,26 +24,49 @@ h1, h2 {
     background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
                 url('hero.jpg') no-repeat;
     background-size: cover;
-    background-position: center 30%; /* Move the image down (30% from top) */
+    background-position: center 30%;
     display: flex;
-    align-items: flex-start;  /* text at top, image visible */
     justify-content: center;
-    padding-top: 200px; /* Push content down */
+    align-items: flex-start;
+    padding-top: 350px;
     color: #f5e6c8;
     text-align: center;
 }
 
 .hero div {
     width: 100%;
+    max-width: 800px;
 }
 
-.hero h1 {
-    font-size: 60px;
-    margin: 10px 0;
+.hero p, .hero h1 {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeSlideIn 2s ease forwards;
 }
 
 .hero p {
+    font-size: 48px; /* doubled */
     font-style: italic;
+    margin-bottom: 20px;
+    animation-delay: 0s; /* first */
+}
+
+.hero h1 {
+    font-size: 120px; /* doubled */
+    margin: 10px 0;
+    animation-delay: 0.7s; /* second */
+}
+
+/* Animation */
+@keyframes fadeSlideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* SECTION */
@@ -111,18 +134,22 @@ h1, h2 {
 
 /* RESPONSIVE */
 @media(max-width: 768px) {
+    .hero {
+        padding-top: 200px;
+        background-position: center 40%;
+    }
+
     .hero h1 {
-        font-size: 40px;
+        font-size: 80px;
+    }
+
+    .hero p {
+        font-size: 32px;
     }
 
     .celebrate, .details {
         flex-direction: column;
         text-align: center;
-    }
-
-    .hero {
-        padding-top: 100px;
-        background-position: center 40%;
     }
 }
 </style>

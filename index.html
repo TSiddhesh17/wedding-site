@@ -24,9 +24,9 @@ h1, h2 {
     width: 100%;
     overflow: hidden;
     display: flex;
-    justify-content: center; /* center horizontally */
+    justify-content: flex-start; /* left-aligned text */
     align-items: flex-end; /* bottom alignment */
-    text-align: center; 
+    text-align: left;
 }
 
 .hero img {
@@ -38,9 +38,8 @@ h1, h2 {
 .hero .hero-text {
     position: absolute;
     bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    color: #FFD700; /* gold text for all views */
+    left: 5%; /* left margin */
+    color: #FFD700; /* gold text */
     max-width: 90%;
     animation: fadeSlideIn 2s ease forwards;
 }

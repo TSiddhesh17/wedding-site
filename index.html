@@ -22,11 +22,13 @@ h1, h2 {
 .hero {
     height: 100vh;
     background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
-                url('hero.jpg') center/cover no-repeat;
+                url('hero.jpg') no-repeat;
+    background-size: cover;
+    background-position: center 30%; /* Move the image down (30% from top) */
     display: flex;
-    align-items: flex-end;      /* Push content toward bottom */
+    align-items: flex-start;  /* text at top, image visible */
     justify-content: center;
-    padding-bottom: 100px;      /* Space from bottom */
+    padding-top: 200px; /* Push content down */
     color: #f5e6c8;
     text-align: center;
 }
@@ -116,6 +118,11 @@ h1, h2 {
     .celebrate, .details {
         flex-direction: column;
         text-align: center;
+    }
+
+    .hero {
+        padding-top: 100px;
+        background-position: center 40%;
     }
 }
 </style>

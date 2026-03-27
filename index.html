@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Siddhesh & Upasana Wedding</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #f5e6d3;
+}
+
+h1, h2 {
+    font-family: 'Playfair Display', serif;
+}
+
+/* HERO */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+                url('hero.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #f5e6c8;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 60px;
+    margin: 10px 0;
+}
+
+.hero p {
+    font-style: italic;
+}
+
+/* SECTION */
+.section {
+    padding: 60px 10%;
+}
+
+/* CELEBRATE */
+.celebrate {
+    background: #b8731d;
+    color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 40px;
+}
+
+.celebrate img {
+    width: 300px;
+    border: 5px solid #fff;
+}
+
+.celebrate-text {
+    max-width: 500px;
+}
+
+/* DETAILS */
+.details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.details img {
+    width: 300px;
+}
+
+.details-text {
+    max-width: 400px;
+}
+
+.details-text a {
+    display: inline-block;
+    margin-top: 5px;
+    padding: 8px 15px;
+    background: #7b2e2e;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* CONTACT */
+.contact {
+    background: #a8895f;
+    color: #4b1e1e;
+}
+
+.contact h2 {
+    font-size: 40px;
+}
+
+.contact-item {
+    margin: 20px 0;
+}
+
+/* RESPONSIVE */
+@media(max-width: 768px) {
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .celebrate, .details {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+    <div>
+        <p>Road to Forever with</p>
+        <h1>Siddhesh & Upasana</h1>
+    </div>
+</section>
+
+<!-- CELEBRATE -->
+<section class="section celebrate">
+    <div class="celebrate-text">
+        <h2>Celebrate With Us</h2>
+        <p>
+            Together with our families, we joyfully invite you to share in the celebration of our marriage.
+            As we promise our lives to one another, your presence will make this special moment even more meaningful.
+        </p>
+    </div>
+    <img src="couple1.jpg" alt="Couple">
+</section>
+
+<!-- DETAILS -->
+<section class="section">
+    <h2 style="color:#7b2e2e;">THE DETAILS</h2>
+    <div class="details">
+        <img src="couple2.jpg" alt="Couple">
+
+        <div class="details-text">
+            <p><strong>Haldi:</strong> 18/02/2026 - 10:00 PM Onwards</p>
+            <p><strong>Venue:</strong></p>
+            <a href="https://maps.app.goo.gl/m9AvMnQ2ZhV5wzT86" target="_blank">
+                📍 View Haldi Location
+            </a>
+
+            <br><br>
+
+            <p><strong>Wedding:</strong> 19/02/2026 - 11:45 AM</p>
+            <p><strong>Venue:</strong></p>
+            <a href="https://www.google.com/maps/place/18%C2%B043'32.0%22N+73%C2%B005'41.5%22E/@18.7254743,73.0948981,216m/data=!3m1!1e3!4m4!3m3!8m2!3d18.725564!4d73.094855" target="_blank">
+                📍 View Wedding Location
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section contact">
+    <h2>Contact Details</h2>
+
+    <div class="contact-item">
+        <strong>Siddhesh Tandel</strong><br>
+        Mobile: +91 8378021327
+    </div>
+
+    <div class="contact-item">
+        <strong>Bhaskar Tandel</strong><br>
+        Mobile: +91 9822567958
+    </div>
+</section>
+
+</body>
+</html>

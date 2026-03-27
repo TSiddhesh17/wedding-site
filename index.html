@@ -21,16 +21,17 @@ h1, h2 {
 /* HERO */
 .hero {
     height: 100vh;
-    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
-                url('hero.jpg') no-repeat;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+                url('hero.jpg') no-repeat center center;
     background-size: cover;
-    background-position: center 30%; /* desktop */
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    padding-top: 350px; /* move text down */
+    padding-top: 200px; /* adjust vertical text */
     color: #f5e6c8;
     text-align: center;
+    overflow: hidden;
+    animation: zoomBackground 20s ease-in-out infinite alternate;
 }
 
 .hero div {
@@ -40,33 +41,32 @@ h1, h2 {
 
 .hero p, .hero h1 {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(20px);
     animation: fadeSlideIn 2s ease forwards;
 }
 
 .hero p {
-    font-size: 48px; /* doubled */
+    font-size: 24px; /* reduced 2x */
     font-style: italic;
-    margin-bottom: 20px;
-    animation-delay: 0s; /* first */
+    margin-bottom: 15px;
+    animation-delay: 0s;
 }
 
 .hero h1 {
-    font-size: 120px; /* doubled */
+    font-size: 60px; /* reduced 2x */
     margin: 10px 0;
-    animation-delay: 0.7s; /* second */
+    animation-delay: 0.7s;
 }
 
-/* Animation */
+/* Animations */
 @keyframes fadeSlideIn {
-    0% {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes zoomBackground {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.1); }
 }
 
 /* SECTION */
@@ -135,19 +135,18 @@ h1, h2 {
 /* RESPONSIVE */
 @media(max-width: 768px) {
     .hero {
-        padding-top: 150px; /* reduce text padding */
-        background-position: center 50%; /* center image for mobile */
-        background-size: contain; /* show full image */
-        height: auto; /* let hero adjust height */
-        min-height: 70vh; /* keep decent height */
+        padding-top: 120px;
+        background-position: center 50%;
+        background-size: cover;
+        min-height: 60vh;
     }
 
     .hero h1 {
-        font-size: 80px;
+        font-size: 40px; /* mobile-friendly */
     }
 
     .hero p {
-        font-size: 32px;
+        font-size: 18px; /* mobile-friendly */
     }
 
     .celebrate, .details {
